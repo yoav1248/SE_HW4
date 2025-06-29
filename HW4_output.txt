@@ -1,0 +1,67 @@
+Running test_1...
+Queue before entering animals:
+Lion, Lion, Lion, Tiger, Tiger, Monkey, Snake, Snake, Zebra
+A Lion entered the ark
+A Lion entered the ark
+A Lion entered the ark
+A Tiger entered the ark
+A Tiger entered the ark
+A Monkey entered the ark
+A Snake entered the ark
+A Snake entered the ark
+A Zebra entered the ark
+
+test_1 finished.
+
+-------------------------
+
+Running test_2...
+Queue before removing animals:
+Queue: Lion Lion Tiger Monkey 
+
+Removing animals...
+Queue: Lion Tiger Monkey 
+Queue: Tiger Monkey 
+Queue: Monkey 
+test_2 finished.
+
+-------------------------
+
+Running test_3...
+Queue before removing animals:
+Queue: Lion Lion Tiger 
+
+Removing animals...
+Queue: Lion Tiger 
+Queue: Tiger 
+test_3 finished.
+
+-------------------------
+
+Running test_4...
+Caught InvalidInputException while adding null
+Caught EmptyQueueException while removing from empty queue
+test_4 finished.
+
+-------------------------
+
+Running test_5...
+Iterating over the queue:
+Lion
+Tiger
+Monkey
+Zebra
+test_5 finished.
+
+-------------------------
+
+Running test_6...
+Original queue:
+Queue: Lion Lion Tiger 
+Cloned queue:
+Queue: Lion Lion Tiger 
+Cloned queue after removal:
+Queue: Lion Tiger 
+queue after removal from cloned:
+Queue: Lion Lion Tiger 
+test_6 finished.
