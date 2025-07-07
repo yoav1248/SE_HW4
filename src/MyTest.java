@@ -1,7 +1,5 @@
-public class Main {
+public class MyTest {
     public static void main(String[] args) {
-        test_1();
-        System.out.println("\n-------------------------\n");
         test_2();
         System.out.println("\n-------------------------\n");
         test_3();
@@ -11,36 +9,6 @@ public class Main {
         test_5();
         System.out.println("\n-------------------------\n");
         test_6();
-
-    }
-
-    public static void test_1() {
-        System.out.println("Running test_1...");
-
-        // Create a new Ark
-        Ark ark = new Ark();
-
-        // Add animals to the Ark
-        ark.add(new Lion());
-        ark.add(new Snake());
-        ark.add(new Tiger());
-        ark.add(new Monkey());
-        ark.add(new Zebra());
-        ark.add(new Snake());
-        ark.add(new Lion());
-        ark.add(new Tiger());
-        ark.add(new Lion());
-
-
-        // Show the current state of the queue
-        System.out.println("Queue before entering animals:");
-        ark.showQueue();
-
-        // Enter animals into the Ark
-        ark.enterAllToArk();
-
-        System.out.println();
-        System.out.println("test_1 finished.");
     }
 
     public static void test_2() {
