@@ -1,10 +1,10 @@
 import java.util.Iterator;
 
 public class SpeciesQueue<T extends Cloneable & Comparable<T>> implements Iterable<T>, Cloneable {
-    CircularArray<T> elements;
+    MyArrayList<T> elements;
 
     public SpeciesQueue() {
-        elements = new CircularArray<>();
+        elements = new MyArrayList<>();
     }
 
     public void add(T element) {
@@ -12,27 +12,25 @@ public class SpeciesQueue<T extends Cloneable & Comparable<T>> implements Iterab
             throw new InvalidInputException();
         }
 
-        elements.add(element);
-
-        reorder();
-    }
-
-
-    private void reorder() {
-        for (int i = elements.size() - 1; i > 0; i--) {
-            if (elements.get(i).compareTo(elements.get(i - 1)) < 0) {
-                elements.swap(i, i-1);
+        int i;
+        for(i = 0; i < elements.size(); i++) {
+            int compareVal = element.compareTo(elements.get(i));
+            if (compareVal > 0 ||
+                    (compareVal == 0 &&
+                            element.getClass() == elements.get(i).getClass())) {
+                elements.insert(i, element);
+                return;
             }
         }
+        elements.insert(i, element);
     }
-
 
     public T remove() {
         if(isEmpty()) {
             throw new EmptyQueueException();
         }
 
-        return elements.poll();
+        return elements.remove(0);
     }
 
     public T peek() {
@@ -40,7 +38,7 @@ public class SpeciesQueue<T extends Cloneable & Comparable<T>> implements Iterab
             throw new EmptyQueueException();
         }
 
-        return elements.peek();
+        return elements.get(0);
     }
 
 
@@ -62,5 +60,14 @@ public class SpeciesQueue<T extends Cloneable & Comparable<T>> implements Iterab
 
     public boolean isEmpty() {
         return elements.isEmpty();
+    }
+
+    @Override
+    public String toString() {
+        String result = "";
+        for (T element: elements) {
+            result += element + ", ";
+        }
+        return result;
     }
 }
