@@ -1,7 +1,6 @@
-C:\Users\yoava\.jdks\openjdk-24\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2024.3.5\lib\idea_rt.jar=63050" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\yoava\IdeaProjects\SE_HW4\out\production\SE_HW4 Main
 Running test_1...
 Queue before entering animals:
-Lion, Lion, Lion, Tiger, Tiger, Monkey, Snake, Snake, Zebra,
+Lion, Lion, Lion, Tiger, Tiger, Monkey, Snake, Snake, Zebra
 A Lion entered the ark
 A Lion entered the ark
 A Lion entered the ark
@@ -18,23 +17,23 @@ test_1 finished.
 
 Running test_2...
 Queue before removing animals:
-Queue: Lion Lion Tiger Monkey
+Queue: Lion Lion Tiger Monkey 
 
 Removing animals...
-Queue: Lion Tiger Monkey
-Queue: Tiger Monkey
-Queue: Monkey
+Queue: Lion Tiger Monkey 
+Queue: Tiger Monkey 
+Queue: Monkey 
 test_2 finished.
 
 -------------------------
 
 Running test_3...
 Queue before removing animals:
-Queue: Lion Lion Tiger
+Queue: Lion Lion Tiger 
 
 Removing animals...
-Queue: Lion Tiger
-Queue: Tiger
+Queue: Lion Tiger 
+Queue: Tiger 
 test_3 finished.
 
 -------------------------
@@ -58,13 +57,11 @@ test_5 finished.
 
 Running test_6...
 Original queue:
-Queue: Lion Lion Tiger
+Queue: Lion Lion Tiger 
 Cloned queue:
-Queue: Lion Lion Tiger
+Queue: Lion Lion Tiger 
 Cloned queue after removal:
-Queue: Lion Tiger
+Queue: Lion Tiger 
 queue after removal from cloned:
-Queue: Lion Lion Tiger
+Queue: Lion Lion Tiger 
 test_6 finished.
-
-Process finished with exit code 0

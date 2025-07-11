@@ -15,14 +15,23 @@ public class MyArrayList<T extends Cloneable> implements Iterable<T>, Cloneable 
         elements = new Object[capacity];
     }
 
+    /**
+     * @return true if the queue is empty
+     */
     public boolean isEmpty() {
         return size == 0;
     }
 
+    /**
+     * @return the size of the array
+     */
     public int size() {
         return size;
     }
 
+    /**
+     * @return the element at index i
+     */
     public T get(int i) {
         return (T) elements[i];
     }
@@ -43,7 +52,14 @@ public class MyArrayList<T extends Cloneable> implements Iterable<T>, Cloneable 
     }
 
     /**
-     * Remove an element at index i and returns it.
+     * append an element to the end of the list. The element is allowed to be null.
+     */
+    public void append(T element) {
+        insert(size, element);
+    }
+
+    /**
+     * Remove an element at index i and return it.
      */
     public T remove(int i) {
         T result = get(i);
@@ -56,6 +72,9 @@ public class MyArrayList<T extends Cloneable> implements Iterable<T>, Cloneable 
         return result;
     }
 
+    /**
+     * Reallocate the array to increase capacity.
+     */
     private void resize() {
         Object[] newElements = new Object[capacity * 2];
 
@@ -72,6 +91,7 @@ public class MyArrayList<T extends Cloneable> implements Iterable<T>, Cloneable 
         return new Itr();
     }
 
+    @Override
     public MyArrayList<T> clone() {
         try {
             MyArrayList<T> clone = (MyArrayList<T>) super.clone();
@@ -86,8 +106,21 @@ public class MyArrayList<T extends Cloneable> implements Iterable<T>, Cloneable 
             return clone;
         } catch (CloneNotSupportedException | NoSuchMethodException
                  | IllegalAccessException | InvocationTargetException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            return null;
         }
+    }
+
+
+    @Override
+    public String toString() {
+        String result = "";
+        for (int i = 0; i < size; i++) {
+            result += elements[i];
+            if (i < size - 1)
+                result += Util.COMMA;
+        }
+        return result;
     }
 
     private class Itr implements Iterator<T> {
