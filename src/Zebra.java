@@ -1,5 +1,5 @@
 public class Zebra extends Animal{
-    protected Zebra() {
+    public Zebra() {
         super(1);
     }
 }

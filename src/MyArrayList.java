@@ -96,7 +96,7 @@ public class MyArrayList<T extends Cloneable> implements Iterable<T>, Cloneable 
         try {
             MyArrayList<T> clone = (MyArrayList<T>) super.clone();
             clone.elements = new Object[capacity];
-            for (int i = 0; i < capacity; i++) {
+            for (int i = 0; i < size; i++) {
                 if (elements[i] != null) {
                     Method cloneMethod = elements[i].getClass().getMethod("clone");
                     cloneMethod.setAccessible(true);

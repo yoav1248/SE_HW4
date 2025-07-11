@@ -57,7 +57,8 @@ public class SpeciesQueue<T extends Cloneable & Comparable<T>> implements Iterab
             clone.elements = this.elements.clone();
             return clone;
         } catch (CloneNotSupportedException e) {
-            throw new RuntimeException(e);
+           e.printStackTrace();
+           return null;
         }
     }
 
