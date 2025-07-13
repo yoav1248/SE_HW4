@@ -8,6 +8,13 @@ public class SpeciesQueue<T extends Cloneable & Comparable<T>> implements Iterab
     }
 
     /**
+     * @return the number of elements in the queue
+     */
+    public int size() {
+        return elements.size();
+    }
+
+    /**
      * add an element to the queue
      */
     public void add(T element) {
